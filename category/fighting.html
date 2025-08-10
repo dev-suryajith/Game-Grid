@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -81,326 +81,303 @@
 </head>
 
 <body class="text-white">
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Single Menu Navbar</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
-            body {
-                background: #0f0f0f;
-                color: #fef2f2;
-                font-family: 'Arial', sans-serif;
-            }
-        </style>
-    </head>
-
-    <body>
-        <!-- Navbar -->
-        <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
-            <div class="w-[120px] h-12 flex items-center justify-center">
-                <img src="./media/GG-logo.png" alt="">
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <input type="checkbox" id="check" class="hidden peer" />
-            <label for="check" class="cursor-pointer md:hidden z-50">
-                <i id="menu" class="fa-solid fa-bars text-red-50 text-2xl peer-checked:hidden"></i>
-                <i id="cancel" class="fa-solid fa-xmark text-red-50 text-2xl hidden peer-checked:inline"></i>
-            </label>
-
-            <!-- Single Menu for All Screens -->
-            <div
-                class="hidden peer-checked:flex md:flex flex-col md:flex-row items-center text-center gap-6 md:gap-8 bg-[#151515] md:bg-transparent absolute md:static top-24 left-0 w-full md:w-auto py-6 md:py-0 z-40 transition-all duration-300">
-
-                <!-- Links Container - Centered on Desktop -->
-                <div
-                    class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                    <a href="../index.html" class="hover:text-red-400 transition-colors">HOME</a>
-                    <a href="../store.html" class="hover:text-red-400 transition-colors">STORE</a>
-                    <a href="../about.html" class="hover:text-red-400 transition-colors">ABOUT</a>
-                    <a href="../index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
-                </div>
-
-                <!-- Buttons -->
-                <div class="flex flex-col md:flex-row gap-4 mt-4 md:mt-0 md:ml-auto">
-                    <button
-                        class="navBTN px-6 py-2 text-red-50 border-2 border-red-50 rounded-md hover:bg-red-50 hover:text-black transition">
-                        LOGIN
-                    </button>
-                    <button
-                        class="navBTN px-6 py-2 bg-red-50 text-[#0f0f0f] rounded-md hover:bg-red-200/0 border-2 border-red-50 hover:text-[#fef2f2] transition">
-                        SIGN UP
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <!-- FIGHTING Section -->
-        <div id="content" class="mt-20 px-4">
-            <!-- Section Title -->
-            <div class="text-center mb-[50px]">
-                <h1 class="text-white text-4xl font-bold">FIGHTING</h1>
-                <div class="mt-2 w-28 h-1 bg-red-50 mx-auto rounded-full"></div>
-            </div>
-
-            <!-- Game Grid -->
-            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
-
-                <!-- Tekken 7 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fighting" data-name="tekken 7">
-                    <div class="relative">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389730/capsule_616x353.jpg?t=1658424887"
-                            alt="Tekken 7" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
-                            ₹999
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Tekken 7</h3>
-                        <p class="text-gray-400 text-sm mb-2">Bandai Namco • Jun 2, 2017</p>
-                        <p class="text-green-400 text-sm mb-4">
-                            <i class="fa-solid fa-thumbs-up mr-1"></i>
-                            Very Positive (85K)
-                        </p>
-                        <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                                Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mortal Kombat 11 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fighting" data-name="mortal kombat 11">
-                    <div class="relative">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976310/capsule_616x353.jpg?t=1681890436"
-                            alt="Mortal Kombat 11" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
-                            ₹999
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Mortal Kombat 11</h3>
-                        <p class="text-gray-400 text-sm mb-2">NetherRealm Studios • Apr 23, 2019</p>
-                        <p class="text-green-400 text-sm mb-4">
-                            <i class="fa-solid fa-thumbs-up mr-1"></i>
-                            Very Positive (60K)
-                        </p>
-                        <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                                Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Street Fighter V -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fighting" data-name="street fighter v">
-                    <div class="relative">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310950/header.jpg"
-                            alt="Street Fighter V" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
-                            ₹499
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Street Fighter V</h3>
-                        <p class="text-gray-400 text-sm mb-2">Capcom • Feb 16, 2016</p>
-                        <p class="text-green-400 text-sm mb-4">
-                            <i class="fa-solid fa-thumbs-up mr-1"></i>
-                            Mostly Positive (40K)
-                        </p>
-                        <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                                Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Injustice 2 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fighting" data-name="injustice 2">
-                    <div class="relative">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/627270/capsule_616x353.jpg?t=1745536404"
-                            alt="Injustice 2" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
-                            ₹499
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Injustice 2</h3>
-                        <p class="text-gray-400 text-sm mb-2">NetherRealm Studios • May 16, 2017</p>
-                        <p class="text-green-400 text-sm mb-4">
-                            <i class="fa-solid fa-thumbs-up mr-1"></i>
-                            Very Positive (25K)
-                        </p>
-                        <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                                Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Super Smash Bros. Ultimate -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fighting" data-name="super smash bros ultimate">
-                    <div class="relative">
-                        <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1280w.jpg"
-                            alt="Super Smash Bros. Ultimate" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
-                            ₹3,999
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Super Smash Bros. Ultimate</h3>
-                        <p class="text-gray-400 text-sm mb-2">Nintendo • Dec 7, 2018</p>
-                        <p class="text-green-400 text-sm mb-4">
-                            <i class="fa-solid fa-thumbs-up mr-1"></i>
-                            Overwhelmingly Positive (80K)
-                        </p>
-                        <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                                Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WWE 2K25 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fighting" data-name="wwe 2k25">
-                    <div class="relative">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTvhru8r9HSmbBmyDwabh8lPNsFkCirttAag&s"
-                            alt="WWE 2K25" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
-                            ₹499
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">WWE 2K25</h3>
-                        <p class="text-gray-400 text-sm mb-2">NetherRealm Studios • May 16, 2017</p>
-                        <p class="text-green-400 text-sm mb-4">
-                            <i class="fa-solid fa-thumbs-up mr-1"></i>
-                            Very Positive (25K)
-                        </p>
-                        <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
-                                Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- Navbar -->
+    <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
+        <div class="w-[120px] h-12 flex items-center justify-center">
+            <img src="../media/GG-logo.png" alt="">
         </div>
 
-        <!-- footer -->
-        <footer class="text-white mt-16">
-            <!-- Top Divider -->
-            <hr class="border-gray-700">
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="check" class="hidden peer" />
+        <label for="check" class="cursor-pointer md:hidden z-50">
+            <i id="menu" class="fa-solid fa-bars text-red-50 text-2xl peer-checked:hidden"></i>
+            <i id="cancel" class="fa-solid fa-xmark text-red-50 text-2xl hidden peer-checked:inline"></i>
+        </label>
 
-            <!-- Main Footer Content -->
-            <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
-                <!-- Left Column -->
-                <div class="max-w-xs text-center md:text-left">
-                    <img src="./media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
-                    <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
-                    <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting
-                        industry.</p>
-                    <a href="mailto:info@gamegrid.com" class="text-red-50 mt-3 block underline">info@gamegrid.com</a>
-                </div>
+        <!-- Single Menu for All Screens -->
+        <div
+            class="hidden peer-checked:flex md:flex flex-col md:flex-row items-center text-center gap-6 md:gap-8 bg-[#151515] md:bg-transparent absolute md:static top-24 left-0 w-full md:w-auto py-6 md:py-0 z-40 transition-all duration-300">
 
-                <!-- Company -->
-                <div>
-                    <h3 class="font-bold text-lg mb-5">COMPANY</h3>
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">About</a></li>
-                        <li><a href="#" class="hover:underline">Term of Use</a></li>
-                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:underline">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Support -->
-                <div>
-                    <h3 class="font-bold text-lg mb-5">SUPPORT</h3>
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">FAQ</a></li>
-                        <li><a href="#" class="hover:underline">Policy</a></li>
-                        <li><a href="#" class="hover:underline">Business</a></li>
-                    </ul>
-                </div>
-
-                <!-- Follow Us -->
-                <div>
-                    <h3 class="font-bold text-lg mb-5">FOLLOW US</h3>
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li><a href="#" class="hover:underline">Instagram</a></li>
-                        <li><a href="#" class="hover:underline">Twitter</a></li>
-                        <li><a href="#" class="hover:underline">Facebook</a></li>
-                    </ul>
-                </div>
-
+            <!-- Links Container - Centered on Desktop -->
+            <div
+                class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                <a href="../index.html" class="hover:text-red-400 transition-colors">HOME</a>
+                <a href="../store.html" class="hover:text-red-400 transition-colors">STORE</a>
+                <a href="../about.html" class="hover:text-red-400 transition-colors">ABOUT</a>
+                <a href="../index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
             </div>
 
-            <!-- Bottom Divider -->
-            <hr class="border-gray-700">
-
-            <!-- Bottom Copyright -->
-            <div class="text-center text-gray-500 text-sm py-4">
-                <img src="./media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
-                ©2025 All Rights Reserved. <br>GameGrid
+            <!-- Buttons -->
+            <div class="flex flex-col md:flex-row gap-4 mt-4 md:mt-0 md:ml-auto">
+                <button
+                    class="navBTN px-6 py-2 text-red-50 border-2 border-red-50 rounded-md hover:bg-red-50 hover:text-black transition">
+                    LOGIN
+                </button>
+                <button
+                    class="navBTN px-6 py-2 bg-red-50 text-[#0f0f0f] rounded-md hover:bg-red-200/0 border-2 border-red-50 hover:text-[#fef2f2] transition">
+                    SIGN UP
+                </button>
             </div>
-        </footer>
+        </div>
+    </nav>
 
-    </body>
+    <!-- FIGHTING Section -->
+    <div id="content" class="mt-20 px-4">
+        <!-- Section Title -->
+        <div class="text-center mb-[50px]">
+            <h1 class="text-white text-4xl font-bold">FIGHTING</h1>
+            <div class="mt-2 w-28 h-1 bg-red-50 mx-auto rounded-full"></div>
+        </div>
 
-    </html>
+        <!-- Game Grid -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
+
+            <!-- Tekken 7 -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                data-category="fighting" data-name="tekken 7">
+                <div class="relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389730/capsule_616x353.jpg?t=1658424887"
+                        alt="Tekken 7" class="w-full h-48 object-cover" />
+                    <div
+                        class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-[#e02c2c]">
+                        ₹999
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[white]">Tekken 7</h3>
+                    <p class="text-gray-400 text-sm mb-2">Bandai Namco • Jun 2, 2017</p>
+                    <p class="text-green-400 text-sm mb-4 text-[white]">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i>
+                        Very Positive (85K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Buy Now
+                        </button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black text-white transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mortal Kombat 11 -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                data-category="fighting" data-name="mortal kombat 11">
+                <div class="relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976310/capsule_616x353.jpg?t=1681890436"
+                        alt="Mortal Kombat 11" class="w-full h-48 object-cover" />
+                    <div
+                        class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-[#e02c2c]">
+                        ₹999
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[white]">Mortal Kombat 11</h3>
+                    <p class="text-gray-400 text-sm mb-2">NetherRealm Studios • Apr 23, 2019</p>
+                    <p class="text-green-400 text-sm mb-4 text-[white]">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i>
+                        Very Positive (60K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Buy Now
+                        </button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black text-white transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Street Fighter V -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                data-category="fighting" data-name="street fighter v">
+                <div class="relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/310950/header.jpg"
+                        alt="Street Fighter V" class="w-full h-48 object-cover" />
+                    <div
+                        class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-[#e02c2c]">
+                        ₹499
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[white]">Street Fighter V</h3>
+                    <p class="text-gray-400 text-sm mb-2">Capcom • Feb 16, 2016</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i>
+                        Mostly Positive (40K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Buy Now
+                        </button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black text-white transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Injustice 2 -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                data-category="fighting" data-name="injustice 2">
+                <div class="relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/627270/capsule_616x353.jpg?t=1745536404"
+                        alt="Injustice 2" class="w-full h-48 object-cover" />
+                    <div
+                        class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-[#e02c2c]">
+                        ₹499
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[white]">Injustice 2</h3>
+                    <p class="text-gray-400 text-sm mb-2">NetherRealm Studios • May 16, 2017</p>
+                    <p class="text-green-400 text-sm mb-4 text-[white]">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i>
+                        Very Positive (25K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Buy Now
+                        </button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black text-white transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Super Smash Bros. Ultimate -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                data-category="fighting" data-name="super smash bros ultimate">
+                <div class="relative">
+                    <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1280w.jpg"
+                        alt="Super Smash Bros. Ultimate" class="w-full h-48 object-cover" />
+                    <div
+                        class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-[#e02c2c]">
+                        ₹3,999
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[white]">Super Smash Bros. Ultimate</h3>
+                    <p class="text-gray-400 text-sm mb-2">Nintendo • Dec 7, 2018</p>
+                    <p class="text-green-400 text-sm mb-4 text-[white]">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i>
+                        Overwhelmingly Positive (80K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Buy Now
+                        </button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black text-white transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WWE 2K25 -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                data-category="fighting" data-name="wwe 2k25">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTvhru8r9HSmbBmyDwabh8lPNsFkCirttAag&s"
+                        alt="WWE 2K25" class="w-full h-48 object-cover" />
+                    <div
+                        class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-[#e02c2c]">
+                        ₹499
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-[white]">WWE 2K25</h3>
+                    <p class="text-gray-400 text-sm mb-2">NetherRealm Studios • May 16, 2017</p>
+                    <p class="text-green-400 text-sm mb-4 text-[white]">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i>
+                        Very Positive (25K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Buy Now
+                        </button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black text-white transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="text-white mt-16">
+        <!-- Main Footer Content -->
+        <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
+            <!-- Left Column -->
+            <div class="max-w-xs text-center md:text-left">
+                <img src="../media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
+                <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
+                <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry.</p>
+                <a href="mailto:info@gamegrid.com" class="text-red-50 mt-3 block underline">info@gamegrid.com</a>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-bold text-lg mb-5">COMPANY</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li><a href="#" class="hover:underline">About</a></li>
+                    <li><a href="#" class="hover:underline">Term of Use</a></li>
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h3 class="font-bold text-lg mb-5">SUPPORT</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Policy</a></li>
+                    <li><a href="#" class="hover:underline">Business</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h3 class="font-bold text-lg mb-5">FOLLOW US</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li><a href="#" class="hover:underline">Instagram</a></li>
+                    <li><a href="#" class="hover:underline">Twitter</a></li>
+                    <li><a href="#" class="hover:underline">Facebook</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Divider -->
+        <hr class="border-gray-700">
+
+        <!-- Bottom Copyright -->
+        <div class="text-center text-gray-500 text-sm py-4">
+            <img src="../media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+            ©2025 All Rights Reserved. <br>GameGrid
+        </div>
+    </footer>
+
+</body>
+
+</html>
