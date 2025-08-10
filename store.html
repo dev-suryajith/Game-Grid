@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>GameGrid - Store</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #151515 100%);
+        }
+
+        nav {
+            position: fixed;
+            backdrop-filter: blur(10px);
+            background: rgba(21, 21, 21, 0.9);
+            z-index: 100;
+        }
+
+        .navBTN,
+        .links a {
+            font-family: "Nata Sans", sans-serif;
+            font-weight: 600;
+        }
+
+        #check:checked~.mobile-menu {
+            display: flex;
+        }
+
+        #cancel {
+            display: none;
+        }
+
+        #check:checked~label #menu {
+            display: none;
+        }
+
+        #check:checked~label #cancel {
+            display: inline;
+        }
+
+        .title {
+            font-family: "Nata Sans", sans-serif;
+        }
+
+        footer {
+            background: linear-gradient(180deg, #1F1F1F 0%, #151515 100%);
+        }
+
+        .game-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.1);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .price-tag {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <!-- Navbar -->
+    <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
+        <div class="w-[120px] h-12 flex items-center justify-center">
+            <img src="./media/GG-logo.png" alt="">
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="check" class="hidden peer" />
+        <label for="check" class="cursor-pointer md:hidden z-50">
+            <i id="menu" class="fa-solid fa-bars text-red-50 text-2xl peer-checked:hidden transition-all"></i>
+            <i id="cancel" class="fa-solid fa-xmark text-red-50 text-2xl hidden peer-checked:inline transition-all"></i>
+        </label>
+
+        <!-- Single Menu for All Screens -->
+        <div
+            class="hidden peer-checked:flex md:flex flex-col md:flex-row items-center text-center gap-6 md:gap-8 bg-[#151515] md:bg-transparent absolute md:static top-24 left-0 w-full md:w-auto py-6 md:py-0 z-40 transition-all duration-300">
+
+            <!-- Links Container - Centered on Desktop -->
+            <div
+                class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                <a href="./index.html" class="hover:text-red-400 transition-all duration-300 hover:scale-105">HOME</a>
+                <a href="#" class="hover:text-red-400 transition-all duration-300">STORE</a>
+                <a href="./about.html" class="hover:text-red-400 transition-all duration-300 hover:scale-105">ABOUT</a>
+                <a href="./index.html#contact" class="hover:text-red-400 transition-all duration-300 hover:scale-105">CONTACT</a>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col md:flex-row gap-4 mt-4 md:mt-0 md:ml-auto">
+                <button
+                    class="navBTN px-6 py-2 text-red-50 border-2 border-red-50 rounded-md hover:bg-red-50 hover:text-black transition-all duration-300 hover:scale-105">
+                    LOGIN
+                </button>
+                <button
+                    class="navBTN px-6 py-2 bg-red-50 text-[#0f0f0f] rounded-md hover:bg-red-200/0 border-2 border-red-50 hover:text-[#fef2f2] transition-all duration-300 hover:scale-105">
+                    SIGN UP
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Store Section -->
+    <section class="pt-32 pb-16 px-6 md:px-12 text-white">
+        <!-- Store Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold title mb-4">GAME STORE</h1>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                Discover your next favorite game from our curated collection of titles across all genres.
+            </p>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="max-w-7xl mx-auto mb-12">
+            <!-- Search Bar -->
+            <div class="search-container mb-8">
+                <div class="relative max-w-lg mx-auto">
+                    <input 
+                        type="text" 
+                        placeholder="Search games..." 
+                        class="w-full px-6 py-4 bg-[#1f1f1f] border border-gray-700 rounded-full text-white placeholder-gray-400 focus:border-red-400 focus:outline-none transition-colors"
+                        id="searchInput"
+                    />
+                    <i class="fa-solid fa-search absolute right-6 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <a href="./category/action.html" class="text-none text[#white]">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="action">
+                        Action
+                    </button>
+                </a>
+                <a href="./category/rpg.html" class="text-none text[#white]">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="rpg">
+                        RPG
+                    </button>
+                </a>
+                <a href="./category/fps.html" class="text-none text[#white]">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="fps">
+                        FPS
+                    </button>
+                </a>
+                <a href="./category/racing.html" class="text-none text[white]">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="racing">
+                        Racing
+                    </button>
+                </a>
+                <a href="./category/sports.html" class="text-none text[#white]">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="sports">
+                        Sports
+                    </button>
+                </a>
+                <a href="./category/strategy.html" class="text-none text[#white]">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="strategy">
+                        Strategy
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Games Grid -->
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="gamesGrid">
+                
+                <!-- Game Card 1 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="action" data-name="the witcher 3">
+                    <div class="relative">
+                        <img src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f" 
+                             alt="The Witcher 3" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹1,950
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Witcher 3: Wild Hunt</h3>
+                        <p class="text-gray-400 text-sm mb-2">CD Projekt Red • May 15, 2015</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Overwhelmingly Positive (771K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="action" data-name="grand theft auto v">
+                    <div class="relative">
+                        <img src="https://assets.xboxservices.com/assets/0b/17/0b179504-412d-4af7-9e00-3e3d92633577.jpg" 
+                             alt="GTA V" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹1,299
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Grand Theft Auto V</h3>
+                        <p class="text-gray-400 text-sm mb-2">Rockstar Games • Sep 17, 2013</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (1.2M)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="action" data-name="cyberpunk 2077">
+                    <div class="relative">
+                        <img src="https://www.pcworld.com/wp-content/uploads/2025/06/PhantomLiberty_01_Aufmacher.jpg?quality=50&strip=all" 
+                             alt="Cyberpunk 2077" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹2,499
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cyberpunk 2077</h3>
+                        <p class="text-gray-400 text-sm mb-2">CD Projekt Red • Dec 10, 2020</p>
+                        <p class="text-yellow-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Mixed (542K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 4 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="fps" data-name="call of duty">
+                    <div class="relative">
+                        <img src="https://images.ctfassets.net/vfkpgemp7ek3/3098815104/c9eb4e66e6dcd3efec72034b80291feb/call-of-duty-mobile-first-week-china.jpg" 
+                             alt="Call of Duty" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹3,999
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Call of Duty: Modern Warfare II</h3>
+                        <p class="text-gray-400 text-sm mb-2">Activision • Oct 28, 2022</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Mostly Positive (89K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 5 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="racing" data-name="forza horizon">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/3ba3c9fc0eb7f97d84a29a79099a4917166eb400/ss_3ba3c9fc0eb7f97d84a29a79099a4917166eb400.1920x1080.jpg?t=1753372584" 
+                             alt="Forza Horizon" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹2,999
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Forza Horizon 5</h3>
+                        <p class="text-gray-400 text-sm mb-2">Microsoft Studios • Nov 9, 2021</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (234K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 6 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="rpg" data-name="baldurs gate">
+                    <div class="relative">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1748346026" 
+                             alt="Baldurs Gate 3" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹2,499
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Baldur's Gate 3</h3>
+                        <p class="text-gray-400 text-sm mb-2">Larian Studios • Aug 3, 2023</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Overwhelmingly Positive (567K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 7 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="sports" data-name="fifa">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2669320/ss_009991924bc40dd9d9793bbef7b5783470e3030d.1920x1080.jpg?t=1752681627" 
+                             alt="FIFA" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹3,499
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">EA Sports FC 25</h3>
+                        <p class="text-gray-400 text-sm mb-2">EA Sports • Sep 27, 2024</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Mostly Positive (45K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 8 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="strategy" data-name="company of heroes">
+                    <div class="relative">
+                        <img src="https://sm.pcmag.com/pcmag_au/review/c/company-of/company-of-heroes-3-for-pc_dkjp.jpg" 
+                             alt="Company of Heroes" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                            ₹1,999
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Company of Heroes 3</h3>
+                        <p class="text-gray-400 text-sm mb-2">Relic Entertainment • Feb 23, 2023</p>
+                        <p class="text-yellow-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Mixed (23K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-16">
+                <button class="px-8 py-4 bg-gradient-to-r from-red-400 to-red-500 text-black rounded-xl font-bold hover:from-red-500 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+                    Load More Games
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white mt-16">
+        <!-- Top Divider -->
+        <hr class="border-gray-700">
+
+        <!-- Main Footer Content -->
+        <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
+            <!-- Left Column -->
+            <div class="max-w-xs text-center md:text-left">
+                <img src="./media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
+                <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
+                <p class="text-sm mt-2 text-gray-300 leading-relaxed">Your ultimate gaming destination, connecting players with incredible experiences across every genre.</p>
+                <a href="mailto:info@gamegrid.com" class="text-red-400 mt-3 block hover:text-red-300 transition-colors">info@gamegrid.com</a>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h3 class="font-bold text-lg mb-5">COMPANY</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-red-400 transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Term of Use</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h3 class="font-bold text-lg mb-5">SUPPORT</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-red-400 transition-colors">FAQ</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Policy</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Business</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h3 class="font-bold text-lg mb-5">FOLLOW US</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Twitter</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Divider -->
+        <hr class="border-gray-700">
+
+        <!-- Bottom Copyright -->
+        <div class="text-center text-gray-500 text-sm py-6">
+            <img src="./media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+            ©2025 All Rights Reserved. <br>GameGrid
+        </div>
+    </footer>
+
+</body>
+
+</html>

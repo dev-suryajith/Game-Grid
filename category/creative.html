@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,29 +82,10 @@
 
 <body class="text-white">
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Single Menu Navbar</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
-            body {
-                background: #0f0f0f;
-                color: #fef2f2;
-                font-family: 'Arial', sans-serif;
-            }
-        </style>
-    </head>
-
-    <body>
         <!-- Navbar -->
         <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
             <div class="w-[120px] h-12 flex items-center justify-center">
-                <img src="./media/GG-logo.png" alt="">
+                <img src="../media/GG-logo.png" alt="">
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -121,10 +102,10 @@
                 <!-- Links Container - Centered on Desktop -->
                 <div
                     class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                    <a href="./index.html" class="hover:text-red-400 transition-colors">HOME</a>
-                    <a href="#" class="hover:text-red-400 transition-colors">STORE</a>
-                    <a href="#" class="hover:text-red-400 transition-colors">ABOUT</a>
-                    <a href="./index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
+                    <a href="../index.html" class="hover:text-red-400 transition-colors">HOME</a>
+                    <a href="../store.html" class="hover:text-red-400 transition-colors">STORE</a>
+                    <a href="../about.html" class="hover:text-red-400 transition-colors">ABOUT</a>
+                    <a href="../index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
                 </div>
 
                 <!-- Buttons -->
@@ -141,6 +122,7 @@
             </div>
         </nav>
 
+        <!-- CREATIVE Section -->
         <div id="content" class="mt-20 px-4">
             <!-- Section Title -->
             <div class="text-center mb-[50px]">
@@ -151,77 +133,160 @@
             <!-- Game Grid -->
             <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
 
-                <!-- Minecraft -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3njWAZUVsGJc9JAVBfMUk_tQyPV6THdtI4g&s"
-                        class="w-full h-full object-cover" alt="Minecraft">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Minecraft Dungeons</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹1,099</span>
+                <!-- Minecraft Dungeons -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="creative" data-name="minecraft dungeons">
+                    <div class="relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3njWAZUVsGJc9JAVBfMUk_tQyPV6THdtI4g&s"
+                            alt="Minecraft Dungeons" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹1,099
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Minecraft Dungeons</h3>
+                        <p class="text-gray-400 text-sm mb-2">Mojang Studios • May 26, 2020</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (50K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Terraria -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg"
-                        class="w-full h-full object-cover" alt="Terraria">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Terraria</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹499</span>
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="creative" data-name="terraria">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg"
+                            alt="Terraria" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹499
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Terraria</h3>
+                        <p class="text-gray-400 text-sm mb-2">Re-Logic • May 16, 2011</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (100K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- The Sims 4 -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg"
-                        class="w-full h-full object-cover" alt="The Sims 4">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">The Sims 4</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">Free</span>
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="creative" data-name="the sims 4">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg"
+                            alt="The Sims 4" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            Free
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">The Sims 4</h3>
+                        <p class="text-gray-400 text-sm mb-2">Maxis • Sep 2, 2014</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Mixed (60K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Play Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Planet Coaster -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/header.jpg"
-                        class="w-full h-full object-cover" alt="Planet Coaster">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Planet Coaster</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹1,499</span>
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="creative" data-name="planet coaster">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/header.jpg"
+                            alt="Planet Coaster" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹1,499
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Planet Coaster</h3>
+                        <p class="text-gray-400 text-sm mb-2">Frontier Developments • Nov 17, 2016</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (40K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Dreams -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXvZFpMdJiRf7wAA0DQCuim0i7wBLpHXAhIA&s"
-                        class="w-full h-full object-cover" alt="Dreams">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Ocean World: Eden Crafters Prologue</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">Free</span>
+                <!-- Cities: Skylines -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="creative" data-name="cities skylines">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg"
+                            alt="Cities: Skylines" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹999
+                        </div>
                     </div>
-                </a>
-
-                <!-- LEGO Builder’s Journey -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544360/header.jpg"
-                        class="w-full h-full object-cover" alt="LEGO Builder’s Journey">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">LEGO Builder’s Journey</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹529</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cities: Skylines</h3>
+                        <p class="text-gray-400 text-sm mb-2">Colossal Order • Mar 10, 2015</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (35K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
                     </div>
-                </a>
+                </div>
 
             </div>
         </div>
@@ -236,7 +301,7 @@
             <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
                 <!-- Left Column -->
                 <div class="max-w-xs text-center md:text-left">
-                    <img src="./media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
+                    <img src="../media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
                     <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
                     <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and
                         typesetting
@@ -282,7 +347,7 @@
 
             <!-- Bottom Copyright -->
             <div class="text-center text-gray-500 text-sm py-4">
-                <img src="./media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+                <img src="../media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
                 ©2025 All Rights Reserved. <br>GameGrid
             </div>
         </footer>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,29 +82,10 @@
 
 <body class="text-white">
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Single Menu Navbar</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
-            body {
-                background: #0f0f0f;
-                color: #fef2f2;
-                font-family: 'Arial', sans-serif;
-            }
-        </style>
-    </head>
-
-    <body>
         <!-- Navbar -->
         <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
             <div class="w-[120px] h-12 flex items-center justify-center">
-                <img src="./media/GG-logo.png" alt="">
+                <img src="../media/GG-logo.png" alt="">
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -121,10 +102,10 @@
                 <!-- Links Container - Centered on Desktop -->
                 <div
                     class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                    <a href="./index.html" class="hover:text-red-400 transition-colors">HOME</a>
-                    <a href="#" class="hover:text-red-400 transition-colors">STORE</a>
-                    <a href="#" class="hover:text-red-400 transition-colors">ABOUT</a>
-                    <a href="./index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
+                    <a href="../index.html" class="hover:text-red-400 transition-colors">HOME</a>
+                    <a href="../store.html" class="hover:text-red-400 transition-colors">STORE</a>
+                    <a href="../about.html" class="hover:text-red-400 transition-colors">ABOUT</a>
+                    <a href="../index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
                 </div>
 
                 <!-- Buttons -->
@@ -141,6 +122,7 @@
             </div>
         </nav>
 
+        <!-- ACTION Section -->
         <div id="content" class="mt-20 px-4">
             <!-- Section Title -->
             <div class="text-center mb-[50px]">
@@ -152,81 +134,193 @@
             <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
 
                 <!-- God of War Ragnarök -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/capsule_616x353.jpg?t=1750909504"
-                        class="w-full h-full object-cover" alt="God of War Ragnarök">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">God of War Ragnarök</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹3,999</span>
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="action" data-name="god of war ragnarok">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/capsule_616x353.jpg?t=1750909504"
+                            alt="God of War Ragnarök" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹3,999
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">God of War Ragnarök</h3>
+                        <p class="text-gray-400 text-sm mb-2">Santa Monica Studio • Nov 9, 2022</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (120K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Marvel's Spider-Man 2 (Price TBD) -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/cb8da9b3e99cf7362cd88c10a0544b7fe892ccad/capsule_616x353.jpg?t=1750954033"
-                        class="w-full h-full object-cover" alt="Marvel's Spider-Man 2">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Marvel's Spider-Man 2</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹3,999</span>
+                <!-- Marvel's Spider-Man 2 -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="action" data-name="marvels spider-man 2">
+                    <div class="relative">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/cb8da9b3e99cf7362cd88c10a0544b7fe892ccad/capsule_616x353.jpg?t=1750954033"
+                            alt="Marvel's Spider-Man 2" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹3,999
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Marvel's Spider-Man 2</h3>
+                        <p class="text-gray-400 text-sm mb-2">Insomniac Games • Oct 20, 2023</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (15K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Assassin’s Creed Mirage (Price TBD) -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1753294133"
-                        class="w-full h-full object-cover" alt="Assassin’s Creed Mirage">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Assassin’s Creed Mirage</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹2,499</span>
+                <!-- Assassin’s Creed Mirage -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="action" data-name="assassins creed mirage">
+                    <div class="relative">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1753294133"
+                            alt="Assassin’s Creed Mirage" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹2,499
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Assassin’s Creed Mirage</h3>
+                        <p class="text-gray-400 text-sm mb-2">Ubisoft • Oct 5, 2023</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Mostly Positive (10K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Ghost of Tsushima (Price TBD) -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1750948552"
-                        class="w-full h-full object-cover" alt="Ghost of Tsushima">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Ghost of Tsushima</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹3,999</span>
+                <!-- Ghost of Tsushima -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="action" data-name="ghost of tsushima">
+                    <div class="relative">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1750948552"
+                            alt="Ghost of Tsushima" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹3,999
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ghost of Tsushima</h3>
+                        <p class="text-gray-400 text-sm mb-2">Sucker Punch Productions • Jul 17, 2020</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (45K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Elden Ring (Price TBD) -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1748630546"
-                        class="w-full h-full object-cover" alt="Elden Ring">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Elden Ring</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹3,599</span>
+                <!-- Elden Ring -->
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="action" data-name="elden ring">
+                    <div class="relative">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1748630546"
+                            alt="Elden Ring" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹3,599
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Elden Ring</h3>
+                        <p class="text-gray-400 text-sm mb-2">FromSoftware • Feb 25, 2022</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Overwhelmingly Positive (200K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Devil May Cry 5 Special Edition -->
-                <a href="" target="_blank"
-                    class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6Sy-0l_iAeCsy08gzsAT-Nb6xbA8uDb28Q&s"
-                        class="w-full h-full object-cover" alt="Devil May Cry 5">
-                    <div
-                        class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                        <h3 class="text-sm font-semibold drop-shadow-md">Devil May Cry 5 (Special Edition)</h3>
-                        <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹2,499</span>
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800 w-[350px]"
+                    data-category="action" data-name="devil may cry 5 special edition">
+                    <div class="relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6Sy-0l_iAeCsy08gzsAT-Nb6xbA8uDb28Q&s"
+                            alt="Devil May Cry 5 (Special Edition)" class="w-full h-48 object-cover" />
+                        <div
+                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm bg-black bg-opacity-60">
+                            ₹2,499
+                        </div>
                     </div>
-                </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Devil May Cry 5 (Special Edition)</h3>
+                        <p class="text-gray-400 text-sm mb-2">Capcom • Mar 8, 2022</p>
+                        <p class="text-green-400 text-sm mb-4">
+                            <i class="fa-solid fa-thumbs-up mr-1"></i>
+                            Very Positive (30K)
+                        </p>
+                        <div class="flex gap-2">
+                            <button
+                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                                Buy Now
+                            </button>
+                            <button
+                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-
-
 
 
         <!-- footer -->
@@ -238,7 +332,7 @@
             <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
                 <!-- Left Column -->
                 <div class="max-w-xs text-center md:text-left">
-                    <img src="./media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
+                    <img src="../media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
                     <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
                     <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and
                         typesetting
@@ -284,7 +378,7 @@
 
             <!-- Bottom Copyright -->
             <div class="text-center text-gray-500 text-sm py-4">
-                <img src="./media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+                <img src="../media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
                 ©2025 All Rights Reserved. <br>GameGrid
             </div>
         </footer>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,27 +82,10 @@
 
 <body class="text-white">
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Menu Navbar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            background: #0f0f0f;
-            color: #fef2f2;
-            font-family: 'Arial', sans-serif;
-        }
-    </style>
-</head>
-<body>
     <!-- Navbar -->
     <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
         <div class="w-[120px] h-12 flex items-center justify-center">
-            <img src="./media/GG-logo.png" alt="">
+            <img src="../media/GG-logo.png" alt="">
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -117,11 +100,12 @@
             class="hidden peer-checked:flex md:flex flex-col md:flex-row items-center text-center gap-6 md:gap-8 bg-[#151515] md:bg-transparent absolute md:static top-24 left-0 w-full md:w-auto py-6 md:py-0 z-40 transition-all duration-300">
 
             <!-- Links Container - Centered on Desktop -->
-            <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                <a href="./index.html" class="hover:text-red-400 transition-colors">HOME</a>
-                <a href="#" class="hover:text-red-400 transition-colors">STORE</a>
-                <a href="#" class="hover:text-red-400 transition-colors">ABOUT</a>
-                <a href="./index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
+            <div
+                class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                <a href="../index.html" class="hover:text-red-400 transition-colors">HOME</a>
+                <a href="../store.html" class="hover:text-red-400 transition-colors">STORE</a>
+                <a href="../about.html" class="hover:text-red-400 transition-colors">ABOUT</a>
+                <a href="../index.html#contact" class="hover:text-red-400 transition-colors">CONTACT</a>
             </div>
 
             <!-- Buttons -->
@@ -138,122 +122,257 @@
         </div>
     </nav>
 
+    <!-- FPS Section -->
     <div id="content" class="mt-20 px-4">
-        <!-- Section Title -->
         <div class="text-center mb-[50px]">
             <h1 class="text-white text-4xl font-bold">First-Person Shooter (FPS)</h1>
             <div class="mt-2 w-28 h-1 bg-red-50 mx-auto rounded-full"></div>
         </div>
 
-        <!-- Game Grid -->
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
+
             <!-- Battlefield 2042 -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://ezgame.dk/cdn/shop/products/Battlefield2042.jpg?v=1669787630"
-                    class="w-full h-full object-cover" alt="Battlefield 2042">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Battlefield 2042</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹1,999</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="battlefield 2042">
+                <div class="relative">
+                    <img src="https://ezgame.dk/cdn/shop/products/Battlefield2042.jpg?v=1669787630"
+                        alt="Battlefield 2042" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        ₹1,999</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Battlefield 2042</h3>
+                    <p class="text-gray-400 text-sm mb-2">DICE • Nov 19, 2021</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Mixed Reviews (250K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Buy
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Rainbow Six Siege -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://help.generationesports.com/hc/article_attachments/360095116031"
-                    class="w-full h-full object-cover" alt="Rainbow Six Siege">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Rainbow Six Siege</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹899</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="rainbow six siege">
+                <div class="relative">
+                    <img src="https://help.generationesports.com/hc/article_attachments/360095116031"
+                        alt="Rainbow Six Siege" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        ₹899</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Rainbow Six Siege</h3>
+                    <p class="text-gray-400 text-sm mb-2">Ubisoft • Dec 1, 2015</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Very Positive (800K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Buy
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Valorant -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-7d279548324d3a3cbef40e1dc7e84994?resize=1&w=480&h=270&quality=medium"
-                    class="w-full h-full object-cover" alt="Valorant">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Valorant</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">Free</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="valorant">
+                <div class="relative">
+                    <img src="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-7d279548324d3a3cbef40e1dc7e84994?resize=1&w=480&h=270&quality=medium"
+                        alt="Valorant" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        Free</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Valorant</h3>
+                    <p class="text-gray-400 text-sm mb-2">Riot Games • June 2, 2020</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Overwhelmingly Positive (1M+)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Play
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Escape from Tarkov -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://sim590.github.io/images/Escape-from-Tarkov-header.jpg"
-                    class="w-full h-full object-cover" alt="Escape from Tarkov">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Escape from Tarkov</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹3,099</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="escape from tarkov">
+                <div class="relative">
+                    <img src="https://sim590.github.io/images/Escape-from-Tarkov-header.jpg" alt="Escape from Tarkov"
+                        class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        ₹3,099</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Escape from Tarkov</h3>
+                    <p class="text-gray-400 text-sm mb-2">Battlestate Games • 2016</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Mostly Positive (150K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Buy
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Far Cry 6 -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://cdn1.epicgames.com/b4565296c22549e4830c13bc7506642d/offer/TETRA_PREORDER_STANDARD%20EDITION_EPIC_Store_Landscape_2560x1440-2560x1440-827a9d1823ad230a0ea5a2efc7936370.jpg"
-                    class="w-full h-full object-cover" alt="Far Cry 6">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Far Cry 6</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹2,249</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="far cry 6">
+                <div class="relative">
+                    <img src="https://cdn1.epicgames.com/b4565296c22549e4830c13bc7506642d/offer/TETRA_PREORDER_STANDARD%20EDITION_EPIC_Store_Landscape_2560x1440-2560x1440-827a9d1823ad230a0ea5a2efc7936370.jpg"
+                        alt="Far Cry 6" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        ₹2,249</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Far Cry 6</h3>
+                    <p class="text-gray-400 text-sm mb-2">Ubisoft • Oct 7, 2021</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Positive (200K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Buy
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Apex Legends -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPP7Dkw-uADGy0qyCaSb1jfA0ROrj-8RlKtg&s"
-                    class="w-full h-full object-cover" alt="Apex Legends">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Apex Legends</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">Free</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="apex legends">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPP7Dkw-uADGy0qyCaSb1jfA0ROrj-8RlKtg&s"
+                        alt="Apex Legends" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        Free</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Apex Legends</h3>
+                    <p class="text-gray-400 text-sm mb-2">Respawn Entertainment • Feb 4, 2019</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Overwhelmingly Positive (900K+)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Play
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- FragPunk -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://gaming-cdn.com/images/products/17008/orig/fragpunk-pc-game-steam-cover.jpg?v=1718792192"
-                    class="w-full h-full object-cover" alt="FragPunk">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">FragPunk</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹1,099</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="fragpunk">
+                <div class="relative">
+                    <img src="https://gaming-cdn.com/images/products/17008/orig/fragpunk-pc-game-steam-cover.jpg?v=1718792192"
+                        alt="FragPunk" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        ₹1,099</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">FragPunk</h3>
+                    <p class="text-gray-400 text-sm mb-2">Steam • 2022</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Positive (8K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Buy
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Splitgate 2 -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAL1M2dLBpYsbjlOJBZBJcbQ_sI8eVg76-CQ&s"
-                    class="w-full h-full object-cover" alt="Splitgate 2">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Splitgate 2</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">Free</span>
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="splitgate 2">
+                <div class="relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAL1M2dLBpYsbjlOJBZBJcbQ_sI8eVg76-CQ&s"
+                        alt="Splitgate 2" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        Free</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Splitgate 2</h3>
+                    <p class="text-gray-400 text-sm mb-2">1047 Games • 2023</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Positive (15K)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Play
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Specter Divide -->
-            <a href="" target="_blank"
-                class="w-[350px] h-48 rounded-2xl overflow-hidden relative transform hover:scale-105 transition duration-300">
-                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3017860/header.jpg?t=1749758252"
-                    class="w-full h-full object-cover" alt="Specter Divide">
-                <div
-                    class="absolute bottom-0 w-full bg-[#15151596] text-white px-4 py-2 flex justify-between items-center">
-                    <h3 class="text-sm font-semibold drop-shadow-md">Doom: The Dark Ages</h3>
-                    <span class="bg-[#2c2c2c] text-white text-sm px-3 py-1 rounded">₹4,499</span>
+            <!-- Doom: The Dark Ages -->
+            <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
+                style="width: 350px;" data-category="fps" data-name="doom the dark ages">
+                <div class="relative">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3017860/header.jpg?t=1749758252"
+                        alt="Doom: The Dark Ages" class="w-full h-48 object-cover" />
+                    <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        ₹4,499</div>
                 </div>
-            </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Doom: The Dark Ages</h3>
+                    <p class="text-gray-400 text-sm mb-2">Midnight Entity Games • 2023</p>
+                    <p class="text-green-400 text-sm mb-4">
+                        <i class="fa-solid fa-thumbs-up mr-1"></i> Mostly Positive (500)
+                    </p>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Buy
+                            Now</button>
+                        <button
+                            class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -268,9 +387,10 @@
         <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
             <!-- Left Column -->
             <div class="max-w-xs text-center md:text-left">
-                <img src="./media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
+                <img src="../media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
                 <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
-                <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and typesetting
+                <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
                     industry.</p>
                 <a href="mailto:info@gamegrid.com" class="text-red-50 mt-3 block underline">info@gamegrid.com</a>
             </div>
@@ -313,7 +433,7 @@
 
         <!-- Bottom Copyright -->
         <div class="text-center text-gray-500 text-sm py-4">
-            <img src="./media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+            <img src="../media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
             ©2025 All Rights Reserved. <br>GameGrid
         </div>
     </footer>
