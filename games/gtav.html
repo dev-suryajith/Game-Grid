@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>GameGrid - Store</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #151515 100%);
+        }
+
+        nav {
+            position: fixed;
+            backdrop-filter: blur(10px);
+            background: rgba(21, 21, 21, 0.9);
+            z-index: 100;
+        }
+
+        .navBTN,
+        .links a {
+            font-family: "Nata Sans", sans-serif;
+            font-weight: 600;
+        }
+
+        #check:checked~.mobile-menu {
+            display: flex;
+        }
+
+        #cancel {
+            display: none;
+        }
+
+        #check:checked~label #menu {
+            display: none;
+        }
+
+        #check:checked~label #cancel {
+            display: inline;
+        }
+
+        .title {
+            font-family: "Nata Sans", sans-serif;
+        }
+
+        footer {
+            background: linear-gradient(180deg, #1F1F1F 0%, #151515 100%);
+        }
+
+        .game-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.1);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .price-tag {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <!-- Navbar -->
+    <nav class="w-full h-24 flex justify-between items-center gap-6 px-6 md:px-12 relative">
+        <div class="w-[120px] h-12 flex items-center justify-center">
+            <img src="../media/GG-logo.png" alt="">
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="check" class="hidden peer" />
+        <label for="check" class="cursor-pointer md:hidden z-50">
+            <i id="menu" class="fa-solid fa-bars text-red-50 text-2xl peer-checked:hidden transition-all"></i>
+            <i id="cancel" class="fa-solid fa-xmark text-red-50 text-2xl hidden peer-checked:inline transition-all"></i>
+        </label>
+
+        <!-- Single Menu for All Screens -->
+        <div
+            class="hidden peer-checked:flex md:flex flex-col md:flex-row items-center text-center gap-6 md:gap-8 bg-[#151515] md:bg-transparent absolute md:static top-24 left-0 w-full md:w-auto py-6 md:py-0 z-40 transition-all duration-300">
+
+            <!-- Links Container - Centered on Desktop -->
+            <div
+                class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                <a href="../index.html" class="hover:text-red-400 transition-all duration-300 hover:scale-105">HOME</a>
+                <a href="../store.html" class="hover:text-red-400 transition-all duration-300">STORE</a>
+                <a href="../about.html" class="hover:text-red-400 transition-all duration-300 hover:scale-105">ABOUT</a>
+                <a href="../index.html#contact" class="hover:text-red-400 transition-all duration-300 hover:scale-105">CONTACT</a>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col md:flex-row gap-4 mt-4 md:mt-0 md:ml-auto">
+                <button
+                    class="navBTN px-6 py-2 text-red-50 border-2 border-red-50 rounded-md hover:bg-red-50 hover:text-black transition-all duration-300 hover:scale-105">
+                    LOGIN
+                </button>
+                <button
+                    class="navBTN px-6 py-2 bg-red-50 text-[#0f0f0f] rounded-md hover:bg-red-200/0 border-2 border-red-50 hover:text-[#fef2f2] transition-all duration-300 hover:scale-105">
+                    SIGN UP
+                </button>
+            </div>
+        </div>
+    </nav>
+
+<div class="w-full flex">
+    <img src="../media/gtaimage.webp" class="rounded-[30px] m-10 w-[95%]">
+</div>
+<div class="w-full flex">
+    <div class="w-7/10">
+        <div class="m-10">
+            <div class="text-[50px]">GTA V</div>
+            <div>Step into the sprawling, vibrant world of Los Santos and Blaine County in Grand Theft Auto V. Switch between three unique protagonists — Michael, Franklin, and Trevor — as their lives intertwine in a thrilling tale of crime, ambition, and survival. Explore a massive open world filled with heists, street races, side missions, and endless chaos. Whether you’re chasing big scores, customizing your rides, or just causing mayhem, GTA V delivers action, freedom, and fun like no other.</div>
+        </div>
+    </div>
+    <div class="w-1.5/5"><img src="../media/images.webp" class="rounded-[30px] m-10 w-[95%]" style="width:100%;"></div>
+</div>
+<div class="w-full flex justify-center m-10"><div class="rounded-lg bg-blue-800 flex" style="width:50%;"><div class="m-[15px] flex justify-between align-center w-full text-lg"><span style="position:relative;top:10px;">Buy GTA V</span> <div class="flex"><div style="background:rgb(28, 28, 28);"><span class="m-[25px] rounded-lg" style="margin-top:10px;">₹300</span>0</div><button style="position:relative;right:10px;transform:scale(1.2);" class="bg-blue-900 rounded-lg"><div class="m-2">Buy Now</div></button></div></div></div></div>
+
+        <!-- Bottom Divider -->
+        <hr class="border-gray-700">
+
+        <!-- Bottom Copyright -->
+        <div class="text-center text-gray-500 text-sm py-6">
+            <img src="../media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+            ©2025 All Rights Reserved. <br>GameGrid
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
