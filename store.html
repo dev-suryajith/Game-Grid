@@ -113,8 +113,7 @@
                 <a href="./index.html" class="hover:text-red-400 transition-all duration-300 hover:scale-105">HOME</a>
                 <a href="./store.html" class="hover:text-red-400 transition-all duration-300">STORE</a>
                 <a href="./about.html" class="hover:text-red-400 transition-all duration-300 hover:scale-105">ABOUT</a>
-                <a href="./index.html#contact"
-                    class="hover:text-red-400 transition-all duration-300 hover:scale-105">CONTACT</a>
+                <a href="./index.html#contact" class="hover:text-red-400 transition-all duration-300 hover:scale-105">CONTACT</a>
             </div>
 
             <!-- Buttons -->
@@ -136,7 +135,7 @@
         <!-- Store Header -->
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-bold title mb-4">GAME STORE</h1>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
                 Discover your next favorite game from our curated collection of titles across all genres.
             </p>
         </div>
@@ -146,9 +145,12 @@
             <!-- Search Bar -->
             <div class="search-container mb-8">
                 <div class="relative max-w-lg mx-auto">
-                    <input type="text" placeholder="Search games..."
+                    <input 
+                        type="text" 
+                        placeholder="Search games..." 
                         class="w-full px-6 py-4 bg-[#1f1f1f] border border-gray-700 rounded-full text-white placeholder-gray-400 focus:border-red-400 focus:outline-none transition-colors"
-                        id="searchInput" />
+                        id="searchInput"
+                    />
                     <i class="fa-solid fa-search absolute right-6 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                 </div>
             </div>
@@ -156,44 +158,32 @@
             <!-- Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-3 mb-8">
                 <a href="./category/action.html" class="text-none text[#white]">
-                    <button
-                        class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300"
-                        data-filter="action">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="action">
                         Action
                     </button>
                 </a>
                 <a href="./category/rpg.html" class="text-none text[#white]">
-                    <button
-                        class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300"
-                        data-filter="rpg">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="rpg">
                         RPG
                     </button>
                 </a>
                 <a href="./category/fps.html" class="text-none text[#white]">
-                    <button
-                        class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300"
-                        data-filter="fps">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="fps">
                         FPS
                     </button>
                 </a>
                 <a href="./category/racing.html" class="text-none text[white]">
-                    <button
-                        class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300"
-                        data-filter="racing">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="racing">
                         Racing
                     </button>
                 </a>
                 <a href="./category/sports.html" class="text-none text[#white]">
-                    <button
-                        class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300"
-                        data-filter="sports">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="sports">
                         Sports
                     </button>
                 </a>
                 <a href="./category/strategy.html" class="text-none text[#white]">
-                    <button
-                        class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300"
-                        data-filter="strategy">
+                    <button class="filter-btn px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-red-400 transition-all duration-300" data-filter="strategy">
                         Strategy
                     </button>
                 </a>
@@ -203,15 +193,13 @@
         <!-- Games Grid -->
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="gamesGrid">
-
+                
                 <!-- Game Card 1 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="action" data-name="the witcher 3">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="action" data-name="the witcher 3">
                     <div class="relative">
-                        <img src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f"
-                            alt="The Witcher 3" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f" 
+                             alt="The Witcher 3" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹1,950
                         </div>
                     </div>
@@ -223,12 +211,10 @@
                             Overwhelmingly Positive (771K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -236,13 +222,11 @@
                 </div>
 
                 <!-- Game Card 2 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="action" data-name="grand theft auto v">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="action" data-name="grand theft auto v">
                     <div class="relative">
-                        <img src="https://assets.xboxservices.com/assets/0b/17/0b179504-412d-4af7-9e00-3e3d92633577.jpg"
-                            alt="GTA V" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://assets.xboxservices.com/assets/0b/17/0b179504-412d-4af7-9e00-3e3d92633577.jpg" 
+                             alt="GTA V" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹1,299
                         </div>
                     </div>
@@ -254,12 +238,10 @@
                             Very Positive (1.2M)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <a href="games/gtav.html"><button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
-                            </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            </button></a>
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -267,13 +249,11 @@
                 </div>
 
                 <!-- Game Card 3 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="action" data-name="cyberpunk 2077">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="action" data-name="cyberpunk 2077">
                     <div class="relative">
-                        <img src="https://www.pcworld.com/wp-content/uploads/2025/06/PhantomLiberty_01_Aufmacher.jpg?quality=50&strip=all"
-                            alt="Cyberpunk 2077" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://www.pcworld.com/wp-content/uploads/2025/06/PhantomLiberty_01_Aufmacher.jpg?quality=50&strip=all" 
+                             alt="Cyberpunk 2077" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹2,499
                         </div>
                     </div>
@@ -285,12 +265,10 @@
                             Mixed (542K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -298,13 +276,11 @@
                 </div>
 
                 <!-- Game Card 4 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="fps" data-name="call of duty">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="fps" data-name="call of duty">
                     <div class="relative">
-                        <img src="https://images.ctfassets.net/vfkpgemp7ek3/3098815104/c9eb4e66e6dcd3efec72034b80291feb/call-of-duty-mobile-first-week-china.jpg"
-                            alt="Call of Duty" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://images.ctfassets.net/vfkpgemp7ek3/3098815104/c9eb4e66e6dcd3efec72034b80291feb/call-of-duty-mobile-first-week-china.jpg" 
+                             alt="Call of Duty" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹3,999
                         </div>
                     </div>
@@ -316,12 +292,10 @@
                             Mostly Positive (89K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -329,13 +303,11 @@
                 </div>
 
                 <!-- Game Card 5 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="racing" data-name="forza horizon">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="racing" data-name="forza horizon">
                     <div class="relative">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/3ba3c9fc0eb7f97d84a29a79099a4917166eb400/ss_3ba3c9fc0eb7f97d84a29a79099a4917166eb400.1920x1080.jpg?t=1753372584"
-                            alt="Forza Horizon" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/3ba3c9fc0eb7f97d84a29a79099a4917166eb400/ss_3ba3c9fc0eb7f97d84a29a79099a4917166eb400.1920x1080.jpg?t=1753372584" 
+                             alt="Forza Horizon" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹2,999
                         </div>
                     </div>
@@ -347,12 +319,10 @@
                             Very Positive (234K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -360,13 +330,11 @@
                 </div>
 
                 <!-- Game Card 6 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="rpg" data-name="baldurs gate">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="rpg" data-name="baldurs gate">
                     <div class="relative">
-                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1748346026"
-                            alt="Baldurs Gate 3" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1748346026" 
+                             alt="Baldurs Gate 3" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹2,499
                         </div>
                     </div>
@@ -378,12 +346,10 @@
                             Overwhelmingly Positive (567K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -391,13 +357,11 @@
                 </div>
 
                 <!-- Game Card 7 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="sports" data-name="fifa">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="sports" data-name="fifa">
                     <div class="relative">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2669320/ss_009991924bc40dd9d9793bbef7b5783470e3030d.1920x1080.jpg?t=1752681627"
-                            alt="FIFA" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2669320/ss_009991924bc40dd9d9793bbef7b5783470e3030d.1920x1080.jpg?t=1752681627" 
+                             alt="FIFA" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹3,499
                         </div>
                     </div>
@@ -409,12 +373,10 @@
                             Mostly Positive (45K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -422,13 +384,11 @@
                 </div>
 
                 <!-- Game Card 8 -->
-                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800"
-                    data-category="strategy" data-name="company of heroes">
+                <div class="game-card bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] rounded-2xl overflow-hidden border border-gray-800" data-category="strategy" data-name="company of heroes">
                     <div class="relative">
-                        <img src="https://sm.pcmag.com/pcmag_au/review/c/company-of/company-of-heroes-3-for-pc_dkjp.jpg"
-                            alt="Company of Heroes" class="w-full h-48 object-cover" />
-                        <div
-                            class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
+                        <img src="https://sm.pcmag.com/pcmag_au/review/c/company-of/company-of-heroes-3-for-pc_dkjp.jpg" 
+                             alt="Company of Heroes" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 price-tag px-3 py-1 rounded-full text-white font-bold text-sm">
                             ₹1,999
                         </div>
                     </div>
@@ -440,12 +400,10 @@
                             Mixed (23K)
                         </p>
                         <div class="flex gap-2">
-                            <button
-                                class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <button class="flex-1 bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                                 Buy Now
                             </button>
-                            <button
-                                class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
+                            <button class="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition-colors">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
@@ -456,67 +414,66 @@
 
             <!-- Load More Button -->
             <div class="text-center mt-16">
-                <button
-                    class="px-8 py-4 bg-gradient-to-r from-red-400 to-red-500 text-black rounded-xl font-bold hover:from-red-500 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+                <button class="px-8 py-4 bg-gradient-to-r from-red-400 to-red-500 text-black rounded-xl font-bold hover:from-red-500 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
                     Load More Games
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- footer -->
+    <!-- Footer -->
     <footer class="text-white mt-16">
+        <!-- Top Divider -->
+        <hr class="border-gray-700">
+
         <!-- Main Footer Content -->
         <div class="flex flex-col md:flex-row md:justify-around justify-center gap-8 px-6 py-10">
             <!-- Left Column -->
             <div class="max-w-xs text-center md:text-left">
-                <img src="../media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
+                <img src="./media/GG-logo.png" alt="GameGrid Logo" class="mx-auto md:mx-0" width="100">
                 <h2 class="text-2xl font-bold mt-4">GAME GRID</h2>
-                <p class="text-sm mt-2 text-gray-300">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                    industry.</p>
-                <a href="mailto:info@gamegrid.com" class="text-red-50 mt-3 block underline">info@gamegrid.com</a>
+                <p class="text-sm mt-2 text-gray-300 leading-relaxed">Your ultimate gaming destination, connecting players with incredible experiences across every genre.</p>
+                <a href="mailto:info@gamegrid.com" class="text-red-400 mt-3 block hover:text-red-300 transition-colors">info@gamegrid.com</a>
             </div>
 
             <!-- Company -->
             <div>
                 <h3 class="font-bold text-lg mb-5">COMPANY</h3>
-                <ul class="space-y-4 text-sm text-gray-300">
-                    <li><a href="#" class="hover:underline">About</a></li>
-                    <li><a href="#" class="hover:underline">Term of Use</a></li>
-                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-red-400 transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Term of Use</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Contact Us</a></li>
                 </ul>
             </div>
 
             <!-- Support -->
             <div>
                 <h3 class="font-bold text-lg mb-5">SUPPORT</h3>
-                <ul class="space-y-4 text-sm text-gray-300">
-                    <li><a href="#" class="hover:underline">FAQ</a></li>
-                    <li><a href="#" class="hover:underline">Policy</a></li>
-                    <li><a href="#" class="hover:underline">Business</a></li>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-red-400 transition-colors">FAQ</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Policy</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Business</a></li>
                 </ul>
             </div>
 
             <!-- Follow Us -->
             <div>
                 <h3 class="font-bold text-lg mb-5">FOLLOW US</h3>
-                <ul class="space-y-4 text-sm text-gray-300">
-                    <li><a href="#" class="hover:underline">Instagram</a></li>
-                    <li><a href="#" class="hover:underline">Twitter</a></li>
-                    <li><a href="#" class="hover:underline">Facebook</a></li>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Twitter</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Facebook</a></li>
                 </ul>
             </div>
-
         </div>
 
         <!-- Bottom Divider -->
         <hr class="border-gray-700">
 
         <!-- Bottom Copyright -->
-        <div class="text-center text-gray-500 text-sm py-4">
-            <img src="../media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
+        <div class="text-center text-gray-500 text-sm py-6">
+            <img src="./media/GG-logo.png" alt="Logo" class="mx-auto mb-2" width="30">
             ©2025 All Rights Reserved. <br>GameGrid
         </div>
     </footer>
