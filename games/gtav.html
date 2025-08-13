@@ -17,7 +17,6 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>GameGrid - Store</title>
@@ -25,6 +24,7 @@
     <style>
         body {
             background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #151515 100%);
+            font-family: "Nata Sans", sans-serif;
         }
 
         nav {
@@ -34,56 +34,8 @@
             z-index: 100;
         }
 
-        .navBTN,
-        .links a {
-            font-family: "Nata Sans", sans-serif;
-            font-weight: 600;
-        }
-
-        #check:checked~.mobile-menu {
-            display: flex;
-        }
-
-        #cancel {
-            display: none;
-        }
-
-        #check:checked~label #menu {
-            display: none;
-        }
-
-        #check:checked~label #cancel {
-            display: inline;
-        }
-
-        .title {
-            font-family: "Nata Sans", sans-serif;
-        }
-
         footer {
             background: linear-gradient(180deg, #1F1F1F 0%, #151515 100%);
-        }
-
-        .game-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.1);
-        }
-
-        .filter-btn.active {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-            color: white;
-        }
-
-        .search-container {
-            position: relative;
-        }
-
-        .price-tag {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
         }
     </style>
 </head>
@@ -131,46 +83,64 @@
         </div>
     </nav>
 
-    <div class="w-full flex">
-        <img src="../media/gtaimage.webp" class="rounded-[30px] m-10 w-[95%]">
-    </div>
-    <div class="w-full flex">
-        <div class="w-7/10">
-            <div class="m-10">
-                <div class="text-[50px]">GTA V</div>
-                <div>Step into the sprawling, vibrant world of Los Santos and Blaine County in Grand Theft Auto V.
-                    Switch between three unique protagonists — Michael, Franklin, and Trevor — as their lives intertwine
-                    in a thrilling tale of crime, ambition, and survival. Explore a massive open world filled with
-                    heists, street races, side missions, and endless chaos. Whether you’re chasing big scores,
-                    customizing your rides, or just causing mayhem, GTA V delivers action, freedom, and fun like no
-                    other.</div>
+    <!-- Hero Image -->
+    <section class="pt-28 px-6">
+        <img src="../media/gtaimage.webp" alt="GTA V" class="rounded-2xl shadow-lg w-full max-h-[500px] object-cover">
+    </section>
+
+    <!-- Game Details -->
+    <section class="grid md:grid-cols-3 gap-8 px-6 py-12">
+        <!-- Description -->
+        <div class="md:col-span-2 space-y-4">
+            <h1 class="text-4xl font-bold">GTA V</h1>
+            <p class="text-gray-300 leading-relaxed">
+                Step into the sprawling, vibrant world of Los Santos and Blaine County in Grand Theft Auto V.
+                Switch between three unique protagonists — Michael, Franklin, and Trevor — as their lives intertwine
+                in a thrilling tale of crime, ambition, and survival.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                Explore a massive open world filled with heists, street races, side missions, and endless chaos.
+                Whether you’re chasing big scores, customizing your rides, or just causing mayhem, GTA V delivers
+                action, freedom, and fun like no other.
+            </p>
+        </div>
+
+        <!-- Cover Image -->
+        <div>
+            <img src="../media/images.webp" alt="GTA V Cover" class="rounded-2xl shadow-lg w-full object-cover">
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section class="flex justify-center px-6 pb-12">
+        <div class="bg-blue-900/50 rounded-xl p-6 w-full max-w-2xl flex items-center justify-between">
+            <div>
+                <h2 class="text-xl font-bold">Buy GTA V</h2>
+                <span class="text-2xl font-semibold text-red-400">₹3000</span>
             </div>
+            <button class="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-lg text-white font-semibold transition">
+                Buy Now
+            </button>
         </div>
-        <div class="w-1.5/5"><img src="../media/images.webp" class="rounded-[30px] m-10 w-[95%]" style="width:100%;">
-        </div>
-    </div>
-    <div class="w-full flex justify-center m-10">
-        <div class="rounded-lg bg-blue-800 flex" style="width:50%;">
-            <div class="m-[15px] flex justify-between align-center w-full text-lg"><span
-                    style="position:relative;top:10px;">Buy GTA V</span>
-                <div class="flex">
-                    <div style="background:rgb(28, 28, 28);"><span class="m-[25px] rounded-lg"
-                            style="margin-top:10px;">₹300</span>0</div><button
-                        style="position:relative;right:10px;transform:scale(1.2);" class="bg-blue-900 rounded-lg">
-                        <div class="m-2">Buy Now</div>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w-full">
-        <div style="border-bottom:3px solid white;width:50%;margin-left:50px;font-size:30px;padding:20px;">About Game</div>
-        <div class="m-10">Step into the sprawling, sun-soaked city of Los Santos and the surrounding Blaine County in one of the most immersive open-world games ever made. Play as three unique characters—Michael, Franklin, and Trevor—each with their own stories, skills, and missions.
-<br>
-Explore a world packed with heists, street races, businesses to run, and countless side activities. Drive exotic cars, fly jets, dive into the ocean, or just cause chaos—the choice is yours.
-<br>
-The game also includes GTA Online, where you can team up with friends or challenge players worldwide in missions, heists, and competitive events.</div>
-    </div>
+    </section>
+
+    <!-- About Game -->
+    <section class="px-6 pb-16">
+        <h2 class="text-2xl font-bold border-b-2 border-white pb-2 mb-4">About Game</h2>
+        <p class="text-gray-300 leading-relaxed">
+            Step into the sprawling, sun-soaked city of Los Santos and the surrounding Blaine County in one of the most
+            immersive open-world games ever made. Play as three unique characters—Michael, Franklin, and Trevor—each
+            with their own stories, skills, and missions.
+        </p>
+        <p class="text-gray-300 leading-relaxed mt-4">
+            Explore a world packed with heists, street races, businesses to run, and countless side activities. Drive
+            exotic cars, fly jets, dive into the ocean, or just cause chaos—the choice is yours.
+        </p>
+        <p class="text-gray-300 leading-relaxed mt-4">
+            The game also includes GTA Online, where you can team up with friends or challenge players worldwide in
+            missions, heists, and competitive events.
+        </p>
+    </section>
 
     <!-- footer -->
     <footer class="text-white mt-16">
@@ -232,8 +202,4 @@ The game also includes GTA Online, where you can team up with friends or challen
 
 </body>
 
-
 </html>
-
-
-
